@@ -33,3 +33,5 @@ async function init() {
 };
 
 init();
+
+export default init;    
