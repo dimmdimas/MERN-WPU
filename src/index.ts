@@ -3,17 +3,22 @@ import dotenv from "dotenv";
 import router from "./routes/api";
 import bodyParser from "body-parser";
 import db from "./untils/database"
+import docs from "./docs/route";
+import cors from 'cors';
 
 dotenv.config();
 const PORT = process.env.PORT;
 const app = express();
+app.use(cors());
 app.use(bodyParser.json());
+
 
 app.get('/', (req, res) => {
     res.status(200).json({ message: 'Server is running' , data: null});
 });
 
 app.use('/api', router);
+docs(app);
 
 async function init() {
     try {
