@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACARA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: 2px auto;
+            overflow: hidden;
+            background-color: #ffffff;
+            border-radius: 5px;
+        }
+
+        .header {
+            background: #66bc69;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .content {
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .content p {
+            margin: 0;
+            padding: 0 0 20px 0;
+        }
+
+        .content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content ul li {
+            padding: 10px 0;
+        }
+
+        .content ul li strong {
+            display: inline-block;
+            width: 150px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #66bc69;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .footer {
+            background: #66bc69;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                width: 100%;
+                margin: 0;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome</h1>
+        </div>
+
+        <div class="content">
+            <p>Thank you for registering with us. We are excited to have you on board.</p>
+            <p>Hallo <%= username %>
+            </p>
+            <p>Here are your login details:</p>
+
+            <ul>
+                <li><strong>
+                        Nama:
+                    </strong>
+                    <%= fullName %>
+                </li>
+
+                <li><strong>
+                        Email:
+                    </strong>
+                    <%= email %>
+                </li>
+                
+                <li><strong>
+                        Tanggal Pendaftaran:
+                    </strong>
+                    <%= createdAt %>
+                </li>
+            </ul>
+
+            <a href= "<%= activationLink %>" class="button" >Login</a>
+
+            <p>
+                Jika Anda memiliki pertanyaan, jangan ragu untuk menghubungi kami.
+            </p>
+            <p>
+                Terima kasih,
+            </p>
+
+        </div>
+
+        <div class="footer">
+            <p>
+                &copy; 2024 All rights reserved | ACARA
+            </p>
+        </div>
+</body>
+
+</html>

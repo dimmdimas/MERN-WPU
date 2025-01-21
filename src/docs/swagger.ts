@@ -25,10 +25,20 @@ const doc = {
             },
         },
         schemas: {
+            RegisterRequest: {
+                fullName: "Dimas Prasetyo",
+                username: "TOMAT",
+                email: "test.tomat@yopmail.com",
+                password: "Mdrdimas1",
+                confirmPassword: "Mdrdimas1"
+            },
             LoginRequest: {
                 identifier: "TOMAT",
                 password: "Mdrdimas1"
-            }
+            },
+            ActivationRequest: {
+                code: "123456"
+            },
         }
     }
 }
